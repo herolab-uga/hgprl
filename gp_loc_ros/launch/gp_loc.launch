@@ -1,0 +1,17 @@
+<launch>
+	<arg name="robot_name" default="tb2_2"/>
+	<arg name="robot_number" default="0" />
+	<arg name="robot_count" default="3" />
+  <group ns="$(arg robot_name)">
+ 	<node pkg="gp_loc" name="ap_prediction" respawn="false" type="ap_prediction.py" output="screen">
+        <param name="robot_name" value="$(arg robot_name)"/>
+ 		<param name="robot_number" value="$(arg robot_number)"/>
+	</node>
+	<node pkg="gp_loc" name="pos_prediction" respawn="false" type="pos_prediction.py" output="screen">
+ 		<param name="robot_number" value="$(arg robot_number)"/>
+		<param name="robot_count" value="$(arg robot_count)"/>
+	</node>
+</group>
+  
+    
+</launch>
