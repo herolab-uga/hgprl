@@ -1,5 +1,5 @@
-# GP-LOC
-It is a ROS package that implements a GP-Loc: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains robotarium and ROS package which has 3 ROS nodes:
+# GPRL
+It is a ROS package that implements a GPRL: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains robotarium and ROS package which has 3 ROS nodes:
 
   - Access Point Prediction Node.
   - Position Prediction Node.
@@ -10,7 +10,7 @@ The system first trains the GP for a few iterations and then keeps optimizing GP
 
 ![Overview](/images/gp_loc_overview.png)
 ## Architecture
-The overall functionality of GP-LOC with respect to single robot and information sharing can be seen in the architecture figure below:
+The overall functionality of GPRL with respect to single robot and information sharing can be seen in the architecture figure below:
 
 ![Overview](/images/gp_loc_architecture.png)
 
@@ -26,7 +26,7 @@ The overall functionality of GP-LOC with respect to single robot and information
 Download the package and place it inside the ```/src``` folder in catkin workspace. And then compile using ```catkin_make```.
 
 ## 3. Simulation:
-Run the robotarium script for gp-loc as:
+Run the robotarium script for GPRL as:
 ``` python3 gp_loc_robotarium.py ```
 
 ## 4. Compile package
