@@ -8,7 +8,7 @@ It is a ROS package that implements a GPRL: GPS-denied Multi-Robot Relative Loca
 ## Overview
 The system first trains the GP for a few iterations and then keeps optimizing GP during the navigation of the robot. The robot running the GP predicts the access point position and then shares it with other robots for relative localization. An overview of the proposed approach can be found in the Figure below:
 
-![Overview](/images/gprl_overview.pdf)
+![Overview](/images/gprl_overview.png)
 ## Architecture
 The overall functionality of GPRL with respect to single robot and information sharing can be seen in the architecture figure below:
 
