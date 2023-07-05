@@ -27,7 +27,7 @@ Download the package and place it inside the ```/src``` folder in catkin workspa
 
 ## 3. Simulation:
 Run the robotarium script for GPRL as:
-``` python3 gp_loc_robotarium.py ```
+``` python3 gprl_robotarium.py ```
 
 ## 4. Compile package
 Run the GPRL package after installation on a robot and source bash and ~/catkin_explore/devel/setup.sh file:
