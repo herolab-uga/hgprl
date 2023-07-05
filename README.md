@@ -26,13 +26,8 @@ The overall functionality of GPRL with respect to single robot and information s
 Download the package and place it inside the ```/src``` folder in catkin workspace. And then compile using ```catkin_make```.
 
 ## 3. Simulation:
-<<<<<<< HEAD
-Run the robotarium script for gp-loc as:
-``` python3 gprl_robotarium.py ```
-=======
 Run the robotarium script for GPRL as:
 ``` python3 gp_loc_robotarium.py ```
->>>>>>> c0533232aa659f9cd63c9700eb85f076a7e8ad27
 
 ## 4. Compile package
 Run the GPRL package after installation on a robot and source bash and ~/catkin_explore/devel/setup.sh file:
