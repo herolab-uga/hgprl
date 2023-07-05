@@ -1,5 +1,5 @@
-# GP-LOC
-It is a ROS package that implements a GP-Loc: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains robotarium and ROS package which has 3 ROS nodes:
+# GPRL
+It is a ROS package that implements a GPRL: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains robotarium and ROS package which has 3 ROS nodes:
 
   - Access Point Prediction Node.
   - Position Prediction Node.
@@ -8,11 +8,11 @@ It is a ROS package that implements a GP-Loc: GPS-denied Multi-Robot Relative Lo
 ## Overview
 The system first trains the GP for a few iterations and then keeps optimizing GP during the navigation of the robot. The robot running the GP predicts the access point position and then shares it with other robots for relative localization. An overview of the proposed approach can be found in the Figure below:
 
-![Overview](/images/gp_loc_overview.png)
+![Overview](/images/gprl_overview.png)
 ## Architecture
-The overall functionality of GP-LOC with respect to single robot and information sharing can be seen in the architecture figure below:
+The overall functionality of GPRL with respect to single robot and information sharing can be seen in the architecture figure below:
 
-![Overview](/images/gp_loc_architecture.png)
+![Overview](/images/gprl_architecture.png)
 
 ## Installation Requirements
 * C++ requirements.   
@@ -27,10 +27,10 @@ Download the package and place it inside the ```/src``` folder in catkin workspa
 
 ## 3. Simulation:
 Run the robotarium script for gp-loc as:
-``` python3 gp_loc_robotarium.py ```
+``` python3 gprl_robotarium.py ```
 
 ## 4. Compile package
-Run the GP-Loc package after installation on a robot and source bash and ~/catkin_explore/devel/setup.sh file:
+Run the GPRL package after installation on a robot and source bash and ~/catkin_explore/devel/setup.sh file:
 ```
 $ mkdir -p catkin_explore/src
 $ cd catkin_explore/src
@@ -41,7 +41,7 @@ $ catkin_make
 
 ## 5. Real Robot Experimentation
 Setup bring-up of robots and make sure they are publishing all the topic in the correct frames, the launch gp-loc file as:
-``` roslaunch gp_loc gp_loc.launch robot_name:=<tb2_0> robot_number:=<0>  ```
+``` roslaunch gprl gprl.launch robot_name:=<tb2_0> robot_number:=<0>  ```
 > robot_name can be your robots name and robot_number starts from 0 to n.
 
 ### 5.1. Robots Network
@@ -58,7 +58,7 @@ And topic names should be like: ```/tb3_0/odom```,  ```/tb3_0/ap_pos```,  ```/tb
 
 ## 6. Rendezvous Experiment
 To perform rendezvous run the rendezvous node as:
-``` ROS_NAMESPACE=<tb2_0> rosrun gp_loc rendezvous.py _robot_name:=<tb2_0> _robot_count:=<n> _robot_number:=<0> ```
+``` ROS_NAMESPACE=<tb2_0> rosrun gprl rendezvous.py _robot_name:=<tb2_0> _robot_count:=<n> _robot_number:=<0> ```
 > Set all the parameters and namespace accordingly.
 
 
