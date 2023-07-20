@@ -64,7 +64,7 @@ To perform rendezvous, run the rendezvous node as:
 
 ## Core contributors
 
-* **Ehsan Latif** - PhD Candidate
+* **Ehsan Latif** - PhD
 
 * **Dr. Ramviyas Parasuraman** - Lab Director
 
