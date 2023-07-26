@@ -1,9 +1,14 @@
-# GPRL
-It is a ROS package that implements a GPRL: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains robotarium and ROS package which has 3 ROS nodes:
+# GPRL: Gaussian Processes for Relative Localization in Multi-Robot Systems
+It is a ROS package that implements a GPRL: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains Robotarium python codes as well as ROS package which has 3 ROS nodes:
 
   - Access Point Prediction Node.
   - Position Prediction Node.
   - Rendezvous Node
+
+# Citation
+If you find this repository useful, please consider citing our paper: Latif, E., & Parasuraman, R. (2023). GPRL: Gaussian Processes-Based Relative Localization for Multi-Robot Systems. arXiv preprint arXiv:2307.10614.
+Preprint is available in arXiv (https://arxiv.org/pdf/2307.10614.pdf)
+
  
 ## Overview
 The system first trains the GP for a few iterations and then optimizes GP during the robot's navigation. The robot running the GP predicts the access point position and then shares it with other robots for relative localization. An overview of the proposed approach can be found in the Figure below:
@@ -18,7 +23,7 @@ The overall functionality of GPRL with respect to single robot and information s
 * C++ requirements.   
 ([pybind11](https://github.com/pybind/pybind11) is also required, but it's built into this repository; you don't need to install)
 * python 3.6+
-* [Robotarium Installation](https://pypi.org/project/robotarium-python-simulator/) is required for robotarium simulation
+* [Robotarium Installation](https://pypi.org/project/robotarium-python-simulator/) is required for the Robotarium simulation
 * Robots setup with mapping and navigation stack proper TF-Tree with the multi-robotic configuration; topics should be /tb2_0/odom, /tb2_1/odom, etc.
 
 
@@ -39,7 +44,7 @@ $ cd ~/catkin_explore/
 $ catkin_make
 ```
 
-## 5. Real Robot Experimentation
+## 5. Real Robot Setup
 Setup bring-up of robots and make sure they are publishing all the topics in the correct frames, the launch gp-loc file is as:
 ``` roslaunch gprl gprl.launch robot_name:=<tb2_0> robot_number:=<0>  ```
 > robot_name can be your robots name and robot_number starts from 0 to n.
