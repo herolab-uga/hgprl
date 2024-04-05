@@ -1,4 +1,4 @@
-# GPRL: Gaussian Processes for Relative Localization in Multi-Robot Systems
+# HGPRL: Hierarchical Gaussian Processes for Relative Localization in Multi-Robot Systems
 It is a ROS package that implements a GPRL: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains Robotarium python codes as well as ROS package which has 3 ROS nodes:
 
   - Access Point Prediction Node.
