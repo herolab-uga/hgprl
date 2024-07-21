@@ -1,15 +1,23 @@
 # HGPRL: Hierarchical Gaussian Processes for Relative Localization in Multi-Robot Systems
-It is a ROS package that implements a GPRL: GPS-denied Multi-Robot Relative Localization Using Hierarchical Gaussian Process (GP) Inferencing on Wireless Signals. It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. This package contains Robotarium python codes as well as ROS package which has 3 ROS nodes:
+This repository contains the open-sourced ROS package that implements the contributions from the paper "HGP-RL: Distributed Hierarchical Gaussian Processes for Wi-Fi-based Relative Localization in Multi-Robot Systems." 
+
+It uses Gaussian process regression with hierarchical inferencing for access point position prediction and vector transformation for relative localization. 
+
+This package contains Robotarium-Python codes (for simplified simulations) as well as the ROS package (for real-world robot implementations), which has 3 ROS nodes:
 
   - Access Point Prediction Node.
   - Position Prediction Node.
   - Rendezvous Node
 
 # Citation
-If you find this repository useful, please consider citing our paper: Latif, E., & Parasuraman, R. (2023). GPRL: Gaussian Processes-Based Relative Localization for Multi-Robot Systems. arXiv preprint arXiv:2307.10614.
-Preprint is available in arXiv (https://arxiv.org/pdf/2307.10614.pdf)
+If you find this repository useful, please consider citing our paper: Latif, E., & Parasuraman, R. (2024). HGP-RL: Distributed Hierarchical Gaussian Processes for Wi-Fi-based Relative Localization in Multi-Robot Systems. arXiv preprint arXiv:2307.10614.
+Preprint is available in arXiv (https://arxiv.org/pdf/2307.10614)
 
- 
+Update: The paper is accepted for presentation at IROS 2024 (Oct 14-18, 2024. Abu Dhabi)
+
+# Experiment Video
+[![Experiment Demo](https://img.youtube.com/vi/T8I3rYfdyuk/0.jpg)](https://www.youtube.com/watch?v=T8I3rYfdyuk)
+
 ## Overview
 The system first trains the GP for a few iterations and then optimizes GP during the robot's navigation. The robot running the GP predicts the access point position and then shares it with other robots for relative localization. An overview of the proposed approach can be found in the Figure below:
 
