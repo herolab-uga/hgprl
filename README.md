@@ -91,5 +91,5 @@ For further information, contact Ehsan Latif ehsan.latif@uga.edu or Dr. Ramviyas
 https://hero.uga.edu/
 
 <p align="center">
-<img src="https://hero.uga.edu/wp-content/uploads/2021/04/herolab_newlogo_whitebg.png" width="300">
+<img src="https://herolab.org/wp-content/uploads/2021/04/herolab_newlogo_whitebg.png" width="300">
 </p>
